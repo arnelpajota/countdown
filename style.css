@@ -1,0 +1,162 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(135deg, #6e8efb, #a777e3);
+    font-family: 'Arial', sans-serif;
+}
+
+.main {
+    margin-top: -100px;
+    text-align: center; 
+}
+
+.profile-img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%; 
+    margin-bottom: 20px; 
+    object-fit: cover; 
+    box-shadow: 0px 30px 50px rgba(146, 77, 8, 0.5);
+}
+
+.title {
+    font-size: 4vw;
+    font-weight: bold;
+    color: white;
+    margin-bottom: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-shadow: 4px 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+.countdown-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    text-align: center;
+    flex-wrap: wrap;
+}
+
+.countdown {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+    animation: fadeInUp 1s ease-in-out;
+    text-shadow: 4px 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+.time {
+    font-size: 3.5rem;
+    color: white;
+}
+
+.label {
+    font-size: 1.2rem;
+    color: rgba(255, 255, 255, 0.7);
+    margin-top: 10px;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes scaleUp {
+    from {
+        transform: scale(1);
+    }
+    to {
+        transform: scale(1.05);
+    }
+}
+
+/* Media Queries for Responsive Design */
+@media (max-width: 1200px) {
+    .title {
+        font-size: 3.5vw;
+    }
+
+    .countdown {
+        padding: 30px;
+    }
+
+    .time {
+        font-size: 3rem;
+    }
+
+    .label {
+        font-size: 1.1rem;
+    }
+}
+
+@media (max-width: 992px) {
+    .title {
+        font-size: 3vw;
+    }
+
+    .countdown {
+        padding: 25px;
+    }
+
+    .time {
+        font-size: 2.8rem;
+    }
+
+    .label {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .title {
+        font-size: 6vw; /* Larger font size for smaller screens */
+    }
+
+    .countdown {
+        padding: 20px;
+        margin: 10px;
+    }
+
+    .time {
+        font-size: 2.5rem;
+    }
+
+    .label {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .title {
+        font-size: 8vw; /* Biggest font size for mobile screens */
+    }
+
+    .countdown {
+        padding: 15px;
+    }
+
+    .time {
+        font-size: 2rem;
+    }
+
+    .label {
+        font-size: 0.8rem;
+    }
+}
