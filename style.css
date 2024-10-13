@@ -148,8 +148,15 @@ body {
         font-size: 8vw; /* Biggest font size for mobile screens */
     }
 
+    .countdown-container {
+        flex-wrap: nowrap; /* Ensures countdown elements are in a single line */
+        gap: 5px; /* Reduce gap between countdown items */
+        overflow-x: auto; /* Allows horizontal scrolling if needed */
+    }
+
     .countdown {
         padding: 15px;
+        min-width: 80px; /* Ensure countdown items are not too small */
     }
 
     .time {
